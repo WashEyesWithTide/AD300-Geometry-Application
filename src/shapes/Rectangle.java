@@ -16,4 +16,10 @@ public class Rectangle extends Shape {
     public double calculatePerimeter() {
         return 2*(length+width);
     }
+
+    @Override
+    public void displayInfo() {
+        System.out.println(this.length);
+        System.out.println(this.width + "\n");
+    }
 }
