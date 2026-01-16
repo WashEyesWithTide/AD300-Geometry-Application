@@ -4,6 +4,13 @@ public class Rectangle extends Shape {
     public double length;
     public double width;
     public Rectangle(double length, double width) {
+        super("rectangle");
+        this.length = length;
+        this.width = width;
+    }    
+    
+    public Rectangle(String name, double length, double width) {
+        super(name);
         this.length = length;
         this.width = width;
     }
@@ -19,7 +26,10 @@ public class Rectangle extends Shape {
 
     @Override
     public void displayInfo() {
-        System.out.println(this.length);
-        System.out.println(this.width + "\n");
+        System.out.println("Name: " + name);
+        System.out.println("Length: " + length);
+        System.out.println("Width: " + width);
+        System.out.println("Area: " + calculateArea());
+        System.out.println("Parimeter: " + calculatePerimeter() + "\n");
     }
 }
