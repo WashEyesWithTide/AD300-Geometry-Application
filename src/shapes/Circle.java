@@ -2,7 +2,7 @@ package shapes;
 
 public class Circle extends Shape{
 
-    public double radius;
+    private double radius;
 
     public Circle(double radius) {
         super("circle");
@@ -23,7 +23,7 @@ public class Circle extends Shape{
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + name);
+        System.out.println("Name: " + getName());
         System.out.println("Radius: " + radius);
         System.out.println("Area: " + calculateArea());
         System.out.println("Parimeter: " + calculatePerimeter() + "\n");

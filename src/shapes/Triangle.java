@@ -1,9 +1,9 @@
 package shapes;
 
 public class Triangle extends Shape{
-    public double sideA;
-    public double sideB;
-    public double sideC;
+    private double sideA;
+    private double sideB;
+    private double sideC;
 
     public Triangle(double sideA, double sideB, double sideC) {
         super("triangle");
@@ -31,7 +31,7 @@ public class Triangle extends Shape{
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + name);
+        System.out.println("Name: " + getName());
         System.out.println("Side A: " + sideA);
         System.out.println("Side B: " + sideB);
         System.out.println("Side C: " + sideC);

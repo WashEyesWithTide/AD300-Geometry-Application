@@ -1,8 +1,8 @@
 package shapes;
 
 public class Polygon extends Shape {
-    public int numSides;
-    public double lengthSides;
+    private int numSides;
+    private double lengthSides;
 
     public Polygon(int numSides, double lengthSides) {
         super(null);
@@ -24,7 +24,7 @@ public class Polygon extends Shape {
     }
 
     public void displayInfo() {
-        System.out.println("Name: " + name);
+        System.out.println("Name: " + getName());
         System.out.println("Sides: " + numSides);
         System.out.println("Side Length: " + lengthSides);
         System.out.println("Area: " + calculateArea());

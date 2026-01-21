@@ -1,8 +1,9 @@
 package shapes;
 
 public class Rectangle extends Shape {
-    public double length;
-    public double width;
+    private double length;
+    private double width;
+
     public Rectangle(double length, double width) {
         super("rectangle");
         this.length = length;
@@ -26,7 +27,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void displayInfo() {
-        System.out.println("Name: " + name);
+        System.out.println("Name: " + getName());
         System.out.println("Length: " + length);
         System.out.println("Width: " + width);
         System.out.println("Area: " + calculateArea());
