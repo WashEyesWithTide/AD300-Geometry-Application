@@ -15,7 +15,7 @@ public class Main {
 
     }
     public static Shape addShape(Scanner scanner) {
-        String type = "";
+        String type;
         String name;
         while (true) {
             System.out.print("Desired Shape:");
@@ -26,65 +26,68 @@ public class Main {
                         System.out.print("Name: ");
                         name = scanner.nextLine();
                         System.out.print("Length: ");
-                        Double length = scanner.nextDouble();
+                        Double length = Double.parseDouble(scanner.nextLine());
                         System.out.print("Width: ");
-                        Double width = scanner.nextDouble();
+                        Double width = Double.parseDouble(scanner.nextLine());
                         System.out.println();
                         return new Rectangle(name, length, width);
                     }
                     catch (Exception e) {
                         System.out.println("Please enter valid value." + e.getMessage());
                     }
-                    continue;
+                    break;
                 case "triangle":
                     try {
                         System.out.print("Name: ");
                         name = scanner.nextLine();
                         System.out.print("Side A: ");
-                        Double SideA = scanner.nextDouble();
+                        Double SideA = Double.parseDouble(scanner.nextLine());
                         System.out.print("SideB: ");
-                        Double SideB = scanner.nextDouble();
+                        Double SideB = Double.parseDouble(scanner.nextLine());
                         System.out.print("SideC: ");
-                        Double SideC = scanner.nextDouble();
+                        Double SideC = Double.parseDouble(scanner.nextLine());
                         System.out.println();
                         return new Triangle(name, SideA, SideB, SideC);
                     }
                     catch (Exception e) {
                         System.out.println("Please enter valid value." + e.getMessage());
                     }
-                    continue;
+                    break;
                 case "circle":
                     try {
                         System.out.print("Name: ");
                         name = scanner.nextLine();
                         System.out.print("Radius: ");
-                        Double radius = scanner.nextDouble();
+                        Double radius = Double.parseDouble(scanner.nextLine());
                         System.out.println();
                         return new Circle(name, radius);
                     }
                     catch (Exception e) {
                         System.out.println("Please enter valid value." + e.getMessage());
                     }
-                    continue;
+                    break;
                 case "polygon":
                     try {
                         System.out.print("Name: ");
                         name = scanner.nextLine();
                         System.out.print("Number of Sides: ");
-                        int numSides = scanner.nextInt();
+                        int numSides = Integer.parseInt(scanner.nextLine());
                         System.out.print("Length of Sides: ");
-                        double lengthSides = scanner.nextDouble();
+                        double lengthSides = Double.parseDouble(scanner.nextLine());
                         System.out.println();
                         return new Polygon(name, numSides, lengthSides);
                     }
                     catch (Exception e) {
                         System.out.println("Please enter valid value." + e.getMessage());
                     }
-                    continue;
+                    break;
+                case "":
+                    break;
                 default:
-                    System.out.println("Please enter a valid shape");
-                    continue;
+                    System.out.println("Please enter a valid shape.");
+                    break;
             }
+            continue;
         }
     }
 }
