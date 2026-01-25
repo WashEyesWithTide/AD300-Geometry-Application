@@ -1,5 +1,5 @@
-# AD300 Geometry Application
-To run program:
+To run the project: 
 ```
 ./run.sh
 ```
+Availible shapes: "rectangle", "circle", "triangle", "polygon"
