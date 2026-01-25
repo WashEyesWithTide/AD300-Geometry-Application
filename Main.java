@@ -6,8 +6,9 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Shape> shapes = new ArrayList<Shape>();
         Scanner scanner = new Scanner(System.in);
-        shapes.add(addShape(scanner));
-        shapes.add(addShape(scanner));
+        for (int i = 0; i < 4; i++) {
+            shapes.add(addShape(scanner));
+        }
         for (Shape shape : shapes) {
             shape.displayInfo();
         }
